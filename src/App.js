@@ -1,16 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
+//import './App.css';
+
+import { Link, NavLink, Route, Switch } from "react-router-dom";
+import AlbumFeature from "./features/Album";
+import ToDoFeature from "./features/ToDo";
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Cuong ne
-        </p>
-       
-      </header>
+      Header
+      <p>
+        <Link to="/todos">ToDos</Link>
+      </p>
+      <p>
+        <Link to="/albums">Albums</Link>
+      </p>
+      <p>
+        <NavLink activeClassName="active-menu" to="/todos">Todos</NavLink>
+      </p>
+      <p>
+        <NavLink to="/albums">Albums</NavLink>
+      </p>
+      <Switch>
+        <Route exact path="/" component={ToDoFeature} />
+        <Route path="/todos" component={ToDoFeature} />
+        <Route path="/albums" component={AlbumFeature} />
+      </Switch>
     </div>
   );
 }
