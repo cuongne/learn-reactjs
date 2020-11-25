@@ -2,6 +2,7 @@
 //import './App.css';
 
 import { Link, NavLink, Route, Switch } from "react-router-dom";
+import NotFound from "./components/NotFound";
 import AlbumFeature from "./features/Album";
 import ToDoFeature from "./features/ToDo";
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" component={ToDoFeature} />
         <Route path="/todos" component={ToDoFeature} />
         <Route path="/albums" component={AlbumFeature} />
+        <Route component={NotFound}/>
       </Switch>
     </div>
   );
