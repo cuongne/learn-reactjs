@@ -11,6 +11,12 @@ function App() {
     <div className="App">
       Header
       <p>
+        <Link to="/todos">ToDos</Link>
+      </p>
+      <p>
+        <Link to="/albums">Albums</Link>
+      </p>
+      <p>
         <NavLink activeClassName="active-menu" to="/todos">Todos</NavLink>
       </p>
       <p>
